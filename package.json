@@ -7,7 +7,9 @@
   "scripts": {
     "start": "ts-node index.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "factory": "ts-node src/app/DesignPatterns/Factory/Factory.ts",
+    "factory-ex": "ts-node src/app/DesignPatterns/Factory/client.ts"
   },
   "keywords": [],
   "author": "",
