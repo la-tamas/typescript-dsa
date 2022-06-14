@@ -1,0 +1,48 @@
+export interface IProductB {
+  name: string
+}
+
+class ConcreteProduct implements IProductB {
+  name = ''
+}
+
+class ConcreteProductA extends ConcreteProduct {
+  constructor() {
+    super()
+    this.name= 'FactoryB:ConcreteProductA'
+  }
+}
+
+class ConcreteProductB extends ConcreteProduct {
+  constructor() {
+    super()
+    this.name = 'FactoryB:ConcreteProductB'
+  }
+}
+
+class ConcreteProductC extends ConcreteProduct {
+  constructor() {
+    super()
+    this.name = 'FactroyB:ConcreteProductC'
+  }
+}
+
+export class FactoryB {
+  static getObject(some_property: string): IProductB {
+    try {
+      if (some_property === 'a') {
+        return new ConcreteProductA()
+      }
+      if (some_property === 'b') {
+        return new ConcreteProductB()
+      }
+      if (some_property === 'c') {
+        return new ConcreteProductC()
+      }
+      throw new Error('Class not found!')
+    } catch (e) {
+      console.log(e)
+    }
+    return new ConcreteProduct()
+  }
+}

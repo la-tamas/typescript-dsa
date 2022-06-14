@@ -1,7 +1,7 @@
 {
   "name": "js-dsa",
   "version": "1.0.0",
-  "description": "",
+  "description": "DSA & Design Patterns",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,8 @@
     "build": "tsc",
     "test": "jest",
     "factory": "ts-node src/app/DesignPatterns/Factory/Factory.ts",
-    "factory-ex": "ts-node src/app/DesignPatterns/Factory/client.ts"
+    "factory-ex": "ts-node src/app/DesignPatterns/Factory/client.ts",
+    "abstract-factory": "ts-node src/app/DesignPatterns/AbstractFactory/abstract-factory-concept.ts"
   },
   "keywords": [],
   "author": "",
